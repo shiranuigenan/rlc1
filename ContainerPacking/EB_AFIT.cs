@@ -9,7 +9,7 @@ namespace ContainerPacking
 	/// which itself was a JavaScript port of https://github.com/wknechtel/3d-bin-pack/, which is a C reconstruction 
 	/// of a novel algorithm developed in a U.S. Air Force master's thesis by Erhan Baltacioglu in 2001.
 	/// </summary>
-	public class EB_AFIT : IPackingAlgorithm
+	public class EB_AFIT
 	{
 		#region Public Methods
 
@@ -26,8 +26,6 @@ namespace ContainerPacking
 			Report(container);
 
 			AlgorithmPackingResult result = new AlgorithmPackingResult();
-			result.AlgorithmID = (int)AlgorithmType.EB_AFIT;
-			result.AlgorithmName = "EB-AFIT";
 
 			for (int i = 1; i <= itemsToPackCount; i++)
 			{
@@ -58,7 +56,6 @@ namespace ContainerPacking
 		private List<Item> itemsToPack;
 		private List<Item> itemsPackedInOrder;
 		private List<Layer> layers;
-		private ContainerPackingResult result;
 
 		private ScrapPad scrapfirst;
 		private ScrapPad smallestZ;
@@ -528,7 +525,6 @@ namespace ContainerPacking
 		{
 			itemsToPack = new List<Item>();
 			itemsPackedInOrder = new List<Item>();
-			result = new ContainerPackingResult();
 
 			// The original code uses 1-based indexing everywhere. This fake entry is added to the beginning
 			// of the list to make that possible.
