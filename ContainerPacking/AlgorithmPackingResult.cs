@@ -17,7 +17,7 @@ namespace ContainerPacking
         #endregion Constructors
 
         #region Public Properties
-
+        
         [DataMember]
         public string AlgorithmName { get; set; } = "EB-AFIT Modified(RLC)";
 

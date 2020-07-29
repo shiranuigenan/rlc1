@@ -39,8 +39,6 @@ namespace ContainerPacking
 
 			result.PackedItems = itemsPackedInOrder;
 			
-
-
 			if (result.UnpackedItems.Count == 0)
 			{
 				result.IsCompletePack = true;
@@ -284,7 +282,7 @@ namespace ContainerPacking
 			int layersIndex;
 			decimal bestVolume = 0.0M;
 
-			for (int containerOrientationVariant = 1; (containerOrientationVariant <= 6) && !quit; containerOrientationVariant++)
+			for (int containerOrientationVariant = 5; (containerOrientationVariant <= 5) && !quit; containerOrientationVariant++)
 			{
 				switch (containerOrientationVariant)
 				{
